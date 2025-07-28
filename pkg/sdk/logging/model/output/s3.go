@@ -170,6 +170,9 @@ type S3OutputConfig struct {
 	OneEyeFormat bool `json:"oneeye_format,omitempty"`
 	// Custom cluster name (default:one-eye)
 	ClusterName string `json:"clustername,omitempty"`
+	// Specifies the path to a CA bundle file to verify SSL peer certificates
+	// +docLink:"Secret,../secret/"
+	SslCaBundle *secret.Secret `json:"ssl_ca_bundle,omitempty"`
 }
 
 // +kubebuilder:object:generate=true
